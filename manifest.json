@@ -1,0 +1,6 @@
+{
+    "manifest_version": 1.0,
+    "name": "Prest-Fill",
+    "description": "AI powered autofill extension",
+    "version": "1.0"
+}
