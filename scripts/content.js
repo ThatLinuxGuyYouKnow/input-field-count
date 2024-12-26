@@ -1,4 +1,4 @@
-// Function to find input fields
+
 function checkInputFields() {
     const inputFields = document.querySelectorAll('input, textarea, select');
 
