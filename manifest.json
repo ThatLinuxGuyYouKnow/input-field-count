@@ -1,6 +1,46 @@
 {
-    "manifest_version": 1.0,
+    "manifest_version": 3,
     "name": "Prest-Fill",
-    "description": "AI powered autofill extension",
-    "version": "1.0"
+    "description": "AI-powered autofill extension",
+    "version": "1.0.0",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "tabs",
+        "declarativeNetRequest",
+        "webNavigation",
+        "contextMenus",
+        "unlimitedStorage"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "injected_script.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
 }
