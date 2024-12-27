@@ -1,4 +1,4 @@
-// background.js
+
 chrome.sidePanel
     .setPanelBehavior({ openPanelOnActionClick: true })
     .catch((error) => console.error(error));
@@ -25,7 +25,7 @@ async function executeCheckInputFields(tabId) {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'checkInputFields') {
-        // Handle the message from the content script, like opening a sidepanel
+  // unimplemented code for opening a sidebar
         if (message.inputFieldCount > 0) {
             chrome.sidePanel.open({ tabId: sender.tab.id })
         }
