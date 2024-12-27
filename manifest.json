@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Presto-Fill",
+    "name": "How Many Inputs?",
     "description": "AI-powered autofill extension",
     "version": "1.0.0",
     "background": {
